@@ -1,0 +1,109 @@
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chatbot-tab {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 250px; 
+    height: 50px; /* Adjust height as needed */
+    background-color: #0f0303;
+    border-radius: 10px; /* Make corners slightly rounded */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    padding: 0 10px;
+}
+
+.chatbot-tab:hover {
+    background-color: #0056b3;
+}
+
+.ziggy-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+
+.chatbot {
+    width: 350px;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 90px; /* Adjust based on the tab height */
+    right: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.chat-window {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.user-message,
+.bot-message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-message {
+    justify-content: flex-end;
+    color: blue;
+}
+
+.bot-message {
+    justify-content: flex-start;
+    color: green;
+}
+
+.user-message img,
+.bot-message img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 8px;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.chat-input button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: darkblue;
+}
