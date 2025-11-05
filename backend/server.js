@@ -27,9 +27,23 @@ app.use("/images",express.static('uploads'))
 app.use("/api/cart", cartRouter)
 app.use("/api/chat", chatRoute);
 
+// lightweight health check
+app.get("/health", (req, res) => {
+    res.status(200).json({ status: "ok", uptime: process.uptime() })
+})
+
 app.get("/", (req, res) => {
     res.send("API Working")
   });
 
 app.listen(port, () => console.log(`Server started on http://localhost:${port}`))
+
+// global error handlers to avoid silent crashes
+process.on('unhandledRejection', (reason) => {
+  console.error('Unhandled Rejection:', reason)
+})
+
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught Exception:', err)
+})
 
